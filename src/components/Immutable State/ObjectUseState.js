@@ -9,9 +9,14 @@ export const ObjectUseState = () => {
   const [person, setPerson] = useState(initState);
 
   const changeName = () => {
-    person.fname = "Jason Ojochide";
-    person.lname = "Siegfred";
-    setPerson(person);
+    // person.fname = "Jason Ojochide";
+    // person.lname = "Siegfred";
+    // setPerson(person);
+
+    const newPerson = { ...person };
+    newPerson.fname = "Jason Ojochide";
+    newPerson.lname = "Siegfred";
+    setPerson(newPerson);
   };
 
   console.log("object UseState Render");
