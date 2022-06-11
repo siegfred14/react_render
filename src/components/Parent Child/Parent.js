@@ -14,3 +14,5 @@ export const Parent = () => {
     </div>
   );
 };
+
+// When a perent component renders, React will reccursively render it's child component
