@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Child } from "./Child";
+import { ChildOne } from "./ChildOne";
 
 export const ParentOne = () => {
   const [count, setCount] = useState(0);
@@ -8,7 +8,7 @@ export const ParentOne = () => {
   return (
     <div>
       <button onClick={() => setCount((c) => c + 1)}> count - {count} </button>
-      <Child />
+      <ChildOne />
     </div>
   );
 };
