@@ -8,3 +8,5 @@ export const ChildTwo = () => {
     </div>
   );
 };
+
+export const MemoizedChildTwo = React.memo(ChildTwo);
