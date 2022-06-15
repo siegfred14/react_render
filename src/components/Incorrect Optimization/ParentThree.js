@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import React, { Component, useState } from "react";
+import { MemoizedChildFour } from "./ChildFour";
 import { MemoizedChildThree } from "./ChildThree";
 
 export const ParentThree = () => {
@@ -11,9 +12,10 @@ export const ParentThree = () => {
     <div>
       <button onClick={() => setCount((c) => c + 1)}> count - {count} </button>
       <button onClick={() => setName("Samson")}> Change Name</button>
-      <MemoizedChildThree name={name}>
+      {/* <MemoizedChildThree name={name}>
         <strong>Hello</strong>
-      </MemoizedChildThree>
+      </MemoizedChildThree> */}
+      <MemoizedChildFour name={name} />
     </div>
   );
 };
