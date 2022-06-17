@@ -12,3 +12,6 @@ export const ChildThree = ({ children, name }) => {
 };
 
 export const MemoizedChildThree = React.memo(ChildThree);
+
+// NB: Children components are often either HTML elements of custom components
+// and not plain text nodes
