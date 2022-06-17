@@ -4,7 +4,7 @@ import { MemoizedChildFive } from "./ChildFive";
 
 export const ParentFour = () => {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("Siegfred");
+  const [name, setName] = useState("Onyekachi");
 
   const person = {
     fname: "Elizabeth",
