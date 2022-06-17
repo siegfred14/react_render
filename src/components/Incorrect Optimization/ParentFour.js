@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import React, { Component, useState, useMemo } from "react";
+import React, { Component, useState, useMemo, useCallback } from "react";
 import { MemoizedChildFive } from "./ChildFive";
 
 export const ParentFour = () => {
@@ -15,12 +15,15 @@ export const ParentFour = () => {
 
   const handleClick = () => {};
 
+  const memoizedHandleClick = useCallback(handleClick, []);
+
   console.log("ParentFour Render");
   return (
     <div>
       <button onClick={() => setCount((c) => c + 1)}> count - {count} </button>
       <button onClick={() => setName("Samson")}> Change Name</button>
-      <MemoizedChildFive name={name} person={memoizedPerson} />
+      {/* <MemoizedChildFive name={name} person={memoizedPerson} /> */}
+      <MemoizedChildFive name={name} handleClick={memoizedHandleClick} />
     </div>
   );
 };
