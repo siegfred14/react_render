@@ -11,7 +11,7 @@ export const ContextParent = () => {
   return (
     <>
       <button onClick={() => setCount((c) => c + 1)}>Count {count}</button>
-      <CountProvider>
+      <CountProvider value={count}>
         <MemoizedChildA />
       </CountProvider>
     </>
