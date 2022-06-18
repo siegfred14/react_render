@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UpdatedContext } from "./ContextParent";
 
 export const ChildA = () => {
   console.log("Child A Render");
@@ -21,10 +22,11 @@ export const ChildB = () => {
 };
 
 export const ChildC = () => {
+  const count = useContext(UpdatedContext);
   console.log("Child C Render");
   return (
     <>
-      <div>Child C</div>
+      <div>Child C count = {count} </div>
     </>
   );
 };
